@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<!-- Version: 1 ¦ 25032022 -->
+<!-- Live ¦ 25032022 -->
+
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+  <!-- Tell iOS not to automatically link certain text strings. -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="title" content="Allianz Insurance">
+  <meta name="description" content="Allianz Ireland Insurance">
+  <meta property="og:title" content="Allianz Ireland Insurance">
+  <title>Your Discount Premium for <%= recipient.text3 %> </title>
+  <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+  <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+  <!-- Web Font / @font-face : BEGIN -->
+  <!-- NOTE: If web fonts are not required, lines 23 - 41 can be safely removed. -->
+  <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+  <!--[if mso]>
+
+<style type="text/css">
+
+body, table, td, a, p {font-family: Arial, Helvetica, sans-serif !important;}
+
+</style>
+
+<![endif]-->
+  <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+  <!--[if !mso]><!-->
+  <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+  <!--<![endif]-->
+  <!-- Web Font / @font-face : END -->
+  <!-- CSS Reset : BEGIN -->
+  <style>
+    /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+
+    /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    /* What it does: Stops email clients resizing small text. */
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: forces Samsung Android mail clients to use the entire viewport */
+    #MessageViewBody,
+    #MessageWebViewDiv {
+      width: 100% !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    /* What it does: Replaces default bold style. */
+    th {
+      font-weight: normal;
+    }
+
+    /* What it does: Fixes webkit padding issue. */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+    a {
+      text-decoration: none;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: A work-around for email clients meddling in triggered links. */
+    a[x-apple-data-detectors],
+    /* iOS */
+    .unstyle-auto-detected-links a,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+    .im {
+      color: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+    img.g-img+div {
+      display: none !important;
+    }
+
+    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+    /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      u~div .email-container {
+        min-width: 320px !important;
+      }
+    }
+
+    /* iPhone 6, 6S, 7, 8, and X */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      u~div .email-container {
+        min-width: 375px !important;
+      }
+    }
+
+    /* iPhone 6+, 7+, and 8+ */
+    @media only screen and (min-device-width: 414px) {
+      u~div .email-container {
+        min-width: 414px !important;
+      }
+    }
+  </style>
+  <!-- CSS Reset : END -->
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+    }
+
+    .button-td-primary:hover,
+    .button-a-primary:hover {
+      background: #555555 !important;
+      border-color: #555555 !important;
+    }
+
+    .align-left {
+      margin-left: 0 !important;
+    }
+
+    /* Font */
+    @media-screen {
+      @font-face {
+        font-family: 'Allianz Neo';
+        font-style: normal;
+        font-weight: 200;
+        src: local('AllianzNeoW04-Light'), url(https://res.messaging.allianz.com/res/azeu_mid_prod2/04faa652b7a29a992e8459d7326c2a98.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Allianz Neo';
+        font-style: normal;
+        font-weight: 400;
+        src: local('AllianzNeoW04-Regular'), url(https://res.messaging.allianz.com/res/azeu_mid_prod2/aaab91c6d7729ee137ae79af4f7878da.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Allianz Neo';
+        font-style: normal;
+        font-weight: 600;
+        src: local('AllianzNeoW04-SemiBold'), url(https://res.messaging.allianz.com/res/azeu_mid_prod2/24d2aeee73ec38d815b499603574dda3.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Allianz Neo';
+        font-style: normal;
+        font-weight: 700;
+        src: local('AllianzNeoW04-Bold'), url(https://res.messaging.allianz.com/res/azeu_mid_prod2/12f8246a8f006776b20ccaab28a321d0.woff2) format('woff2');
+      }
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+
+      /* What it does: Adjust typography on small screens to improve readability */
+      .email-container p {
+        font-size: 17px !important;
+      }
+
+      .email-container .headline {
+        font-size: 32px !important;
+        line-height: 40px !important;
+      }
+
+      .align-left {
+        margin: 0 auto !important;
+      }
+
+      .teaser-img {
+        display: inline-block !important;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+
+      /* Wrapper */
+      .root {
+        background-color: #333 !important;
+      }
+
+      .dark-wrapper {
+        background-color: #111 !important;
+      }
+
+      .dark-wrapper-white {
+        background-color: #fff !important;
+      }
+
+      .dark-color-white,
+      .dark-wrapper,
+      .dark-wrapper .dark-link,
+      .dark-wrapper p,
+      .dark-wrapper h2 {
+        color: #fff !important;
+      }
+
+      .dark-imprint {
+        background-color: #444 !important;
+        color: #fff !important;
+      }
+
+      /* icons */
+      .dark-img-default,
+      .dark-img {
+        display: none !important;
+      }
+
+      .light-img-wrapper,
+      .light-img {
+        display: inline-block !important;
+      }
+
+      /* Buttons and Links */
+      .dark-header-link {
+        color: #fff !important;
+        text-decoration: underline !important;
+      }
+
+      .btn {
+        background: #fff !important;
+      }
+
+      .btn-text {
+        background: #fff !important;
+        border-color: #fff !important;
+        color: #111 !important;
+      }
+
+      .btn-secondary {
+        background: transparent !important;
+      }
+
+      .btn-secondary-text {
+        background: transparent !important;
+        border-color: #fff !important;
+        color: #fff !important;
+      }
+
+      /* Content Parts */
+      .quote-details {
+        background: #fff !important;
+        border-color: #fff !important;
+      }
+
+      .quote-details p {
+        color: #414141 !important;
+      }
+
+      /* Utilities */
+      .dark-underline {
+        text-decoration: underline !important;
+      }
+
+      .dark-color-white {
+        color: #fff !important;
+      }
+    }
+  </style>
+  <!-- Progressive Enhancements : END -->
+</head>
+<!--
+    The email background color (#f3f3f3) is defined in three places:
+    1. body tag: for most email clients
+    2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+    3. mso conditional: For Windows 10 Mail
+  -->
+
+<body width="100%" style="margin: 0px; padding: 0px !important; mso-line-height-rule: exactly; background-color: #f3f3f3;">
+  <center class="root" role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #f3f3f3;">
+    <!--[if mso | IE]>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f3f3f3;">
+      <tr>
+      <td>
+      <![endif]-->
+    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;" class="email-container">
+      <!-- Start - Preheader -->
+      <tr>
+        <td>
+          <span class="preheader" style="color: #F5F5F5; display: none !important; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; mso-hide: all !important; opacity: 0; overflow: hidden; visibility: hidden">
+            <div style="display: none; max-height: 0px; overflow: hidden;">Your Discount Premium for <%= recipient.text3 %></div>
+            <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+            <div style="display: none; max-height: 0px; overflow: hidden;"> &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp; </div>
+          </span>
+        </td>
+      </tr>
+      <!-- End - Preheader -->
+      <!-- Start - Header -->
+      <tr>
+        <td class="dark-wrapper-white" style="background-color: #fff; border-bottom: 1px solid #d9d9d9; padding: 16px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="color: #006192;"><a class="dark-link" style="text-decoration: none;" href="https://www.allianz.ie?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="Allianz Ireland">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/0b46f534b3c18f8f87a6fef91ccaee0e.png" height="33" width="130" alt="Allianz Ireland" style="-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 130px; outline: none; text-decoration: none; width: auto;" /></a>
+              </td>
+              <td style="color: #006192; font-family: 'Allianz Neo', Arial, sans-serif; text-align: right;" valign="middle">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0px 0px 0px auto !important;">
+                  <tr>
+                    <td style="padding-left: 8px;" align="left">
+                      <a class="dark-link dark-underline" href="https://net.allianz.ie/MyAllianz/Access/Account/Register?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" style="color: #006192; font-family: 'Allianz Neo', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; text-decoration: none !important; vertical-align: middle;" title="MyAllianz"> MyAllianz </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End - Header -->
+
+
+      <!-- Start - Stage -->
+      <tr>
+        <td style="background-color: #fff;">
+          <img style="display: block; height: auto; max-width: 100%; width: 100%;"
+            src="https://designchief.github.io/ai-emails-05/images/2022/june/01/woman-in-cafe-with-phone.jpg" width="600"
+            height="240" border="0" alt="Allianz Price Promise">
+        </td>
+      </tr>
+      <!-- End - Stage -->
+
+      <!-- Start - Intro -->
+      <tr>
+        <td class="dark-wrapper" style="background-color: #fff; font-family: 'Allianz Neo', Arial, sans-serif; padding: 32px 10.5% 8px 10.5%;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td class="stack-column-center dark-wrapper fallback-text" style="color: #122b54; font-family: 'Allianz Neo', Arial, sans-serif; font-size: 35px; font-weight: 700; line-height: 40px; padding: px 0px 16px 0px; text-align: left;" valign="top" align="center">Your Discount Premium </td>
+            </tr>
+         
+          </table>
+        </td>
+      </tr>
+      <!-- End - Intro -->
+      
+      <!-- Start - Main Copy 1 -->
+      <tr>
+        <td class="dark-wrapper"
+          style="background-color: #fff; font-family: 'Allianz Neo', Arial, sans-serif; padding: 8px 0px 18px; padding-left: 10.5%; padding-right: 10.5%;">
+          <p style="color: #414141;"> Hi <%= recipient.firstName %>, </p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;"> Your insurance is set to renew on <%= recipient.text4 %>. The good news is that you already have a direct debit in place, so your car insurance for policy <%= recipient.accountNumber %> will automatically&nbsp;renew.</p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;"><b>Price Promise:</b> we&rsquo;ve automatically added an extra self-serve discount in addition to any other discounts you are entitled to. To be more transparent, we are offering you our best price up front. You don&rsquo;t need to call to get the&nbsp;discounts.</p> 
+          <p style="color: #414141;"></br><b>Your fully discounted premium for <%= recipient.text3 %> is&nbsp;&euro;<%= recipient.text5 %></b></br></br></p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;">
+            <b>What do I need to do&nbsp;now?</b><br/>
+            Just check your renewal documents to make sure your details are up to date. The easiest way to do this is to go to <a href="https://net.allianz.ie/MyAllianz/Access/Account/Register?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD">www.MyAllianz.ie</a>.</p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;">If there are any changes, it&rsquo;s quicker and easier to notify us in your MyAllianz account rather than calling. If nothing has changed, for example, you have the same car and drivers, then you won&rsquo;t need to do&nbsp;anything.</p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;">We&rsquo;ll send you your insurance disc by post at least a week before&nbsp;renewal.</p>
+          <p style="color: #414141; font-size: 14px; line-height: 20px;">Happy motoring!</p>
+          <p><img src="https://designchief.github.io/ai-emails-05/images/general/signature-frank-donnelly.gif" width="197" height="93" alt="Frank Donnelly"></p>
+        </td>
+      </tr>
+      <!-- End - Main Copy 1 -->
+      <!-- End - BUTTON -->
+      <!-- Start - Social Links -->
+      <tr>
+        <td class="dark-wrapper" style="background-color: #fff; border-top: 1px solid #d9d9d9; padding: 16px; text-align: center;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+            <tr>
+              <td style="padding: 0px 8px;">
+                <a href="https://www.facebook.com/AllianzIreland?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="Facebook">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/1be5cf310a3b85352b78ebca7f5b0906.png" style="display: block; font-size: 0px; line-height: 0px;" width="24" height="24" border="0" alt="Facebook">
+                </a>
+              </td>
+              <td style="padding: 0px 8px;">
+                <a href="https://twitter.com/AllianzIreland?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="Twitter">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/e255c74c1d7bc86f0bca8cf7429d6a04.png" style="display: block; font-size: 0px; line-height: 0px;" width="24" height="24" border="0" alt="Twitter">
+                </a>
+              </td>
+              <td style="padding: 0px 8px;">
+                <a href="https://www.linkedin.com/company/allianz-ireland?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="LinkedIn">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/b8c15d2dcb82f532d5b45a077a006e38.png" style="display: block; font-size: 0px; line-height: 0px;" width="24" height="24" border="0" alt="LinkedIn">
+                </a>
+              </td>
+              <td style="padding: 0px 8px;">
+                <a href="https://www.youtube.com/user/AllianzIreland?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="YouTube">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/55b98438390a1aad74805ea99738bf44.png" style="display: block; font-size: 0px; line-height: 0px;" width="24" height="24" border="0" alt="YouTube">
+                </a>
+              </td>
+              <td style="padding: 0px 8px;">
+                <a href="https://www.instagram.com/allianzireland?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" title="Instagram">
+                  <img src="https://res.messaging.allianz.com/res/azeu_mid_prod2/e6e42362b105b59f77789f8a4c718024.png" style="display: block; font-size: 0px; line-height: 0px;" width="24" height="24" border="0" alt="Instagram">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End - Social Links -->
+      <!-- Start - Imprint -->
+      <tr>
+        <td class="dark-imprint" style="background-color: #f5f5f5; color: #767676; font-family: 'Allianz Neo', Arial, sans-serif; font-size: 9px; line-height: 12px; padding: 16px 0px 5px 0px;">
+          <p style="Margin: 0; Margin-bottom: 16px; color: #767676; font-family: Helvetica, Arial, sans-serif; font-size: 9px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 16px; padding: 0; text-align: center"> <a href="https://www.allianz.ie/contact.html?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" style="Margin: 0; color: #414141; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left; text-decoration: none" alt="Contact Us">Contact Us</a> | <a href="https://www.allianz.ie/data-protection-policy.html?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD" target="_blank" style="Margin: 0; color: #414141; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left; text-decoration: none" alt="Privacy Policy">Privacy Policy</a> | <a href="<%@ include view='MirrorPageUrl' %>" target="_blank" style="Margin: 0; color: #414141; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left; text-decoration: none" alt="View in browser">View in browser</a> </p>
+        </td>
+      </tr>
+      <!-- End - Imprint -->
+
+      <!-- Start - Footer -->
+      <tr>
+        <td class="dark-wrapper" style="background-color: #fff;color: #414141; padding: 24px 16px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td align="left" style="font-family: 'Allianz Neo', Arial, sans-serif; font-size: 14px; line-height: 20px;"> © Allianz <%@ include view='YearValid' %>
+                  <a class="dark-link" style="color: #414141; padding-left: 16px; text-decoration: none;" href="https://www.allianz.ie?utm_source=email&utm_medium=email&utm_campaign=CVM_1257_ Nohaggle_DD">www.allianz.ie</a>
+              </td>
+              <td class="dark-wrapper" style="background-color: #fff; font-family: 'Allianz Neo', Arial, sans-serif; font-size: 14px; line-height: 20px;" align="right">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0px !important;">
+                  <tr>
+                    <td style="color: #414141; font-family: 'Allianz Neo', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; padding-left: 8px;" align="left">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End - Footer -->
+    </table>
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </center>
+</body>
+
+</html>
